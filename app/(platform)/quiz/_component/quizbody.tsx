@@ -127,8 +127,9 @@ function QuizBody( { question }: {question:question[]} ) {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'a',
       'border-red-500': choice === 'a' && !isCorrect && answered,
+      'border-green-600': choice === 'a' && isCorrect && answered,
       'border-green-500': question[currentQuestion].answer ==='a' && answered  })}>
-    <button onClick={()=>{setChoice('a')}} className='bg-white w-full  hover:bg-indigo-200 p-2 rounded-md' value="a" disabled={answered}>{question[currentQuestion].a}</button>
+    <button onClick={()=>{setChoice('a')}} className='bg-white w-full  p-2 rounded-md' value="a" disabled={answered}>{question[currentQuestion].a}</button>
     </div>
     
   </CardContent>
@@ -136,8 +137,9 @@ function QuizBody( { question }: {question:question[]} ) {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'b',
       'border-red-500': choice === 'b' && !isCorrect && answered,
+      'border-green-600': choice === 'b' && isCorrect && answered,
       'border-green-500': question[currentQuestion].answer ==='b' && answered  })}> 
-    <button  onClick={()=>{setChoice('b')}} className='bg-white w-full  hover:bg-sky-300  p-2 rounded-md' value = "b" disabled={answered}>{question[currentQuestion].b}</button>
+    <button  onClick={()=>{setChoice('b')}} className='bg-white w-full  p-2 rounded-md' value = "b" disabled={answered}>{question[currentQuestion].b}</button>
     </div>
     
   </CardContent>
@@ -145,8 +147,9 @@ function QuizBody( { question }: {question:question[]} ) {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'c',
       'border-red-500': choice === 'c' && !isCorrect && answered,
-      'border-green-500': question[currentQuestion].answer ==='c' && answered  })}>
-    <button onClick={()=>{setChoice('c')}} className='bg-white w-full  hover:bg-sky-300  p-2 rounded-md' value ='c' disabled={answered}>{question[currentQuestion].c}</button>
+      'border-green-600': choice === 'c' && isCorrect && answered,
+      'border-green-500': (question[currentQuestion].answer ==='c' && answered) })}>
+    <button onClick={()=>{setChoice('c')}} className='bg-white w-full   p-2 rounded-md' value ='c' disabled={answered}>{question[currentQuestion].c}</button>
     </div>
     
   </CardContent>
@@ -154,15 +157,15 @@ function QuizBody( { question }: {question:question[]} ) {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'd',
       'border-red-500': choice === 'd' && !isCorrect && answered,
+      'border-green-600': choice === 'd' && isCorrect && answered,
       'border-green-500': question[currentQuestion].answer ==='d' && answered  })} >
-    <button onClick={()=>{setChoice('d')}} className='bg-white w-full  hover:bg-sky-300  p-2 rounded-md' value='d' disabled={answered}>{question[currentQuestion].d}</button>
+    <button onClick={()=>{setChoice('d')}} className='bg-white w-full    p-2 rounded-md' value='d' disabled={answered}>{question[currentQuestion].d}</button>
     </div>
     
   </CardContent>
   <CardFooter className= {answered?'block':'hidden'}>
     <div className={isCorrect?'bg-green-100 p-5 rounded-lg' :'bg-red-100 p-5 mt-2 rounded-lg'}><MyComponent paragraphs={question[currentQuestion].explanation}/></div>
   </CardFooter>
-  <CardFooter><h1>{choice}</h1></CardFooter>
 </Card>
 
 

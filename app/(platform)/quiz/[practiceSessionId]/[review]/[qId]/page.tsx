@@ -48,6 +48,7 @@ const page = async ({ params }: {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'a',
       'border-red-500': choice === 'a' && !isCorrect && answered,
+      'border-green-600': choice === 'a' && isCorrect && answered,
       'border-green-500': question.answer ==='a' && answered  })}>
     <button  className='bg-white w-full  p-2 rounded-md' value="a" disabled={answered}>{question.a}</button>
     </div>
@@ -57,6 +58,7 @@ const page = async ({ params }: {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'b',
       'border-red-500': choice === 'b' && !isCorrect && answered,
+      'border-green-600': choice === 'b' && isCorrect && answered,
       'border-green-500': question.answer ==='b' && answered  })}> 
     <button   className='bg-white w-full   p-2 rounded-md' value = "b" disabled={answered}>{question.b}</button>
     </div>
@@ -66,6 +68,7 @@ const page = async ({ params }: {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'c',
       'border-red-500': choice === 'c' && !isCorrect && answered,
+      'border-green-600': choice === 'c' && isCorrect && answered,
       'border-green-500': question.answer ==='c' && answered  })}>
     <button  className='bg-white w-full   p-2 rounded-md' value ='c' disabled={answered}>{question.c}</button>
     </div>
@@ -75,6 +78,7 @@ const page = async ({ params }: {
     <div className= {clsx('border-2 border-black rounded-lg',{
       'border-indigo-500': choice === 'd',
       'border-red-500': choice === 'd' && !isCorrect && answered,
+      'border-green-600': choice === 'd' && isCorrect && answered,
       'border-green-500': question.answer ==='d' && answered  })} >
     <button  className='bg-white w-full   p-2 rounded-md' value='d' disabled={answered}>{question.d}</button>
     </div>

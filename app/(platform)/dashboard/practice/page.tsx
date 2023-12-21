@@ -7,7 +7,6 @@ import Link from 'next/link'
 import React from 'react'
 import PracticeButton from '../../_components/practieButton'
 import { redirect } from 'next/navigation'
-import gotopractice from '../../_components/gotopractice'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import {
   Select,
