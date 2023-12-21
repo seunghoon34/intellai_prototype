@@ -162,7 +162,7 @@ function QuizBody( { question }: {question:question[]} ) {
   <CardFooter className= {answered?'block':'hidden'}>
     <div className={isCorrect?'bg-green-100 p-5 rounded-lg' :'bg-red-100 p-5 mt-2 rounded-lg'}><MyComponent paragraphs={question[currentQuestion].explanation}/></div>
   </CardFooter>
-  <CardFooter><h1>{choice}</h1></CardFooter>
+  
 </Card>
 
 
