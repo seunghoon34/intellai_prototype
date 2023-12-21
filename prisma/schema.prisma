@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  clerkId String 
+  practices practiceSession []
+}
+
+model question{
+  id Int @id @default(autoincrement())
+  question String
+  a String
+  b String
+  c String
+  d String
+  answer String
+  explanation String
+  section Int
+  Topic Int
+
+}
+
+model practiceSession {
+  practiceSessionId Int @id @default(autoincrement())
+  user User @relation(fields: [userId], references:[id])
+  userId Int
+  section Int 
+  topic Int
+  createdAt DateTime @default(now())
+
+   @@index([userId])
+}
+
+model practiceQuestion{
+  practiceQuestionId Int @id @default(autoincrement())
+  psId Int
+  qId Int
+  choice String
+  isCorrect Boolean
+  duration Int
+  topic Int
+
+}
+
+
