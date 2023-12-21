@@ -46,7 +46,7 @@ const page = async () => {
     </TableRow>
   </TableHeader>
   <TableBody>
-  {data.map(i => <TableRow>
+  {data.map(i => <TableRow key={i.practiceSessionId}>
       <TableCell>{i.practiceSessionId}</TableCell>
       <TableCell>{i.createdAt.toString()}</TableCell>
       <TableCell>{section(i.section)}</TableCell>

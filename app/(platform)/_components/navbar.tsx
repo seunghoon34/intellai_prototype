@@ -14,7 +14,7 @@ const Navbar = async () => {
       <MobileSidebar />
         <div className='flex items-center gap-x-4'>
           <Link href='/dashboard'>
-          <img
+          <Image
             src={'/images/logo.png'}
             width={150}
             height={120}

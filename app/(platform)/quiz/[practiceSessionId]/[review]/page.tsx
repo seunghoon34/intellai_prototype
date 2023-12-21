@@ -87,7 +87,7 @@ return (
   </TableHeader>
   <TableBody>
     
-      {data.map(i => <TableRow>
+      {data.map(i => <TableRow key={i.qId}>
         <TableCell className="font-medium">{i.qId}</TableCell>
       <TableCell>{topic(i.topic)}</TableCell>
       <TableCell>{i.isCorrect?'Correct':'Incorrect'}</TableCell>
