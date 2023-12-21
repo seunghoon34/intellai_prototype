@@ -46,7 +46,7 @@ const page = async ({ params }: {
   </CardHeader>
   <CardContent>
     <div className= {clsx('border-2 border-black rounded-lg',{
-      'border-indigo-500': choice === 'a',
+      'border-indigo-500': choice === 'a' && !answered,
       'border-red-500': choice === 'a' && !isCorrect && answered,
       'border-green-600': choice === 'a' && isCorrect && answered,
       'border-green-500': question.answer ==='a' && answered  })}>
@@ -56,7 +56,7 @@ const page = async ({ params }: {
   </CardContent>
   <CardContent>
     <div className= {clsx('border-2 border-black rounded-lg',{
-      'border-indigo-500': choice === 'b',
+      'border-indigo-500': choice === 'b' && !answered,
       'border-red-500': choice === 'b' && !isCorrect && answered,
       'border-green-600': choice === 'b' && isCorrect && answered,
       'border-green-500': question.answer ==='b' && answered  })}> 
@@ -66,7 +66,7 @@ const page = async ({ params }: {
   </CardContent>
   <CardContent>
     <div className= {clsx('border-2 border-black rounded-lg',{
-      'border-indigo-500': choice === 'c',
+      'border-indigo-500': choice === 'c' && !answered,
       'border-red-500': choice === 'c' && !isCorrect && answered,
       'border-green-600': choice === 'c' && isCorrect && answered,
       'border-green-500': question.answer ==='c' && answered  })}>
@@ -76,7 +76,7 @@ const page = async ({ params }: {
   </CardContent>
   <CardContent>
     <div className= {clsx('border-2 border-black rounded-lg',{
-      'border-indigo-500': choice === 'd',
+      'border-indigo-500': choice === 'd' && !answered,
       'border-red-500': choice === 'd' && !isCorrect && answered,
       'border-green-600': choice === 'd' && isCorrect && answered,
       'border-green-500': question.answer ==='d' && answered  })} >

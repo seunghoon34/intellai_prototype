@@ -62,7 +62,7 @@ const questions: {
                     },
                     {
                         id:5, 
-                        question: '<p>If 3 = 18 r , what is the value of 6 +3 r ?</p>', 
+                        question: '<p>If 3r = 18 , what is the value of 6r + 3?</p>', 
                         a:'6',
                         b:'27',
                         c:'36',
@@ -160,7 +160,7 @@ const questions: {
                     },
                     {
                         id:13, 
-                        question: '<p>If 3 = 18 r , what is the value of 6 +3 r ?</p>', 
+                        question: '<p>If 3r = 18 , what is the value of 6r + 3?</p>', 
                         a:'6',
                         b:'27',
                         c:'36',
